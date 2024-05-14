@@ -5,8 +5,8 @@ Use this task to download, or package and publish Universal Packages. Universal 
 
 The pipeline requires the following parameters to be defined:
 
-| Name  | type | Display Name | Values | optional/Required | Comments |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Name  | type | Display Name | Values | Optional/Required | Comments |
+| :------------- | :-------------: | :-------------: | :-------------: | ------------- | :------------- |
 | publishDirectory   | string | publishDirectory |   | Required |  Artifact source |
 | feedsToUsePublish  | string | feedsToUsePublish |  | Required | internal or external feed for artifact |
 | vstsFeedPublish    | string | vstsFeedPublish |  | Required | feed endpoint or source |
