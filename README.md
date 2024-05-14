@@ -6,7 +6,7 @@ Use this task to download, or package and publish Universal Packages. Universal 
 The pipeline requires the following parameters to be defined:
 
 | Name  | type | Display Name | Default | Values | Optional/Required | Comments |
-| :------------- | :-------------: | :-------------: |:-------------: | :-------------: | :-------------: | :------------- |
+| :------------- | :------------- | :------------- |:------------- | :------------- | :------------- | :------------- |
 | publishDirectory   | string | Path to file(s) to publish | $(Build.ArtifactStagingDirectory) |  | Required |  Artifact source |
 | feedsToUsePublish  | string | Feed location | internal | internal or external | Required | internal or external feed for artifact. Input alias: internalOrExternalPublish. Specifies a feed from this collection or another collection in Azure Artifacts. |
 | vstsFeedPublish    | string | Destination Feed | | | Required (when internalOrExternalPublish = internal) | Specifies the project and the feed's name/GUID to publish to. |
