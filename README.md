@@ -7,15 +7,15 @@ The pipeline requires the following parameters to be defined:
 
 | Name  | type | Display Name | Default | Values | Optional/Required | Comments |
 | :------------- | :-------------: | :-------------: |:-------------: | :-------------: | :-------------: | :------------- |
-| publishDirectory   | string | publishDirectory |  |  | Required |  Artifact source |
-| feedsToUsePublish  | string | feedsToUsePublish | | | Required | internal or external feed for artifact |
-| vstsFeedPublish    | string | vstsFeedPublish | | | Required | feed endpoint or source |
-| vstsFeedPackagePublish  | string | vstsFeedPackagePublish | |  | Required | Package to be published  |
-| versionOption  | string | versionOption | patch | major, minor, patch, custom | Required | Option to use version |
-| versionPublish  | string | Custom versions | |  | Required | version to be published  |
-| packagePublishDescription  | string | packagePublishDescription | |  | Required | Description for publishing  |
-| verbosity | string | verbosity | |  | Required | verbose type |
-| publishedPackageVar | string | publishedPackageVar | | | Required | contain the published package name and version |
+| publishDirectory   | string | Path to file(s) to publish | $(Build.ArtifactStagingDirectory) |  | Required |  Artifact source |
+| feedsToUsePublish  | string | Feed location | internal | internal or external | Required | internal or external feed for artifact. Input alias: internalOrExternalPublish. Specifies a feed from this collection or another collection in Azure Artifacts. |
+| vstsFeedPublish    | string | Destination Feed | | | Required (when internalOrExternalPublish = internal) | Specifies the project and the feed's name/GUID to publish to. |
+| vstsFeedPackagePublish  | string | vstsFeedPackagePublish | |  | Required (when internalOrExternalPublish = internal) | Specifies a package ID to publish or creates a new package ID if you've never published a version of this package before. Package names must be lower case and can only use letters, numbers, and dashes (-) |
+| versionOption  | string | versionPublishSelector | patch | major, minor, patch, custom | Required | Specifies a version increment strategy. The custom value to input your package version manually. For new packages, the first version will be 1.0.0 if you specify major, 0.1.0 if you specify minor, or 0.0.1 if you specify patch. |
+| versionPublish  | string | Custom versions | |  | Required when versionPublishSelector = custom | Specifies a custom version schema for the package.   |
+| packagePublishDescription  | string | Description | |  | Optional | Specifies the description of the package contents and/or the changes made in this version of the package.  |
+| verbosity | string | verbosity | None | None, Trace, Debug, Information, Warning, Error, Critical | Optional | verbose type |
+| publishedPackageVar | string | Package Output Variable | | | Optional | Specifies a name for the variable that will contain the published package name and version. |
 
 
 
