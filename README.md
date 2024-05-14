@@ -5,17 +5,17 @@ Use this task to download, or package and publish Universal Packages. Universal 
 
 The pipeline requires the following parameters to be defined:
 
-| Name  | type | Display Name | Values | Optional/Required | Comments |
-| :------------- | :-------------: | :-------------: | :-------------: | ------------- | :------------- |
-| publishDirectory   | string | publishDirectory |   | Required |  Artifact source |
-| feedsToUsePublish  | string | feedsToUsePublish |  | Required | internal or external feed for artifact |
-| vstsFeedPublish    | string | vstsFeedPublish |  | Required | feed endpoint or source |
-| vstsFeedPackagePublish  | string | vstsFeedPackagePublish |   | Required | Package to be published  |
-| versionOption  | string | versionOption |   | Required | Option to use version |
-| versionPublish  | string | versionPublish |   | Required | version to be published  |
-| packagePublishDescription  | string | packagePublishDescription |   | Required | Description for publishing  |
-| verbosity | string | verbosity |   | Required | verbose type |
-| publishedPackageVar | string | publishedPackageVar |  | Required | contain the published package name and version |
+| Name  | type | Display Name | Default | Values | Optional/Required | Comments |
+| :------------- | :-------------: | :-------------: |:-------------: | :-------------: | :-------------: | :------------- |
+| publishDirectory   | string | publishDirectory |  |  | Required |  Artifact source |
+| feedsToUsePublish  | string | feedsToUsePublish | | | Required | internal or external feed for artifact |
+| vstsFeedPublish    | string | vstsFeedPublish | | | Required | feed endpoint or source |
+| vstsFeedPackagePublish  | string | vstsFeedPackagePublish | |  | Required | Package to be published  |
+| versionOption  | string | versionOption | patch | major, minor, patch, custom | Required | Option to use version |
+| versionPublish  | string | Custom versions | |  | Required | version to be published  |
+| packagePublishDescription  | string | packagePublishDescription | |  | Required | Description for publishing  |
+| verbosity | string | verbosity | |  | Required | verbose type |
+| publishedPackageVar | string | publishedPackageVar | | | Required | contain the published package name and version |
 
 
 
