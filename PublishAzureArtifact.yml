@@ -1,1 +1,61 @@
+parameters:
+  - name: publishDirectory
+    displayName: "Artifact source"
+    type: string
+    default: ''
+    
+  - name: feedsToUsePublish
+    displayName: "internal or external feed for artifact"
+    type: string
+    default: ''
+    
+  - name: vstsFeedPublish
+    displayName: "feed endpoint or source"
+    type: string
+    default: ''
+    
+  - name: vstsFeedPackagePublish
+    displayName: "Package to be published"
+    type: string
+    default: ''
 
+  - name: versionOption
+    displayName: "Option to use version"
+    type: string
+    default: ''
+    
+  - name: versionPublish
+    displayName: "version to be published"
+    type: string
+    default: ''
+    
+  - name: packagePublishDescription
+    displayName: "Description for publishing"
+    type: string
+    default: ''
+    
+  - name: verbosity
+    displayName: "verbose type"
+    type: string
+    default: ''
+    
+  - name: publishedPackageVar
+    displayName: "contain the published package name and version"
+    type: string
+    default: ''
+ 
+
+steps:
+  - task: UniversalPackages@0
+    inputs:
+      command: 'publish'
+      publishDirectory: '${{ parameters.publishDirectory }}'
+      feedsToUsePublish: '${{ parameters.feedsToUsePublish }}'
+      vstsFeedPublish: '${{ parameters.vstsFeedPublish }}'
+      vstsFeedPackagePublish: '${{ parameters.vstsFeedPackagePublish }}'
+      versionOption: '${{ parameters.versionOption }}'
+      versionPublish: '${{ parameters.versionPublish }}'
+      packagePublishDescription: '${{ parameters.packagePublishDescription }}'
+      verbosity: '${{ parameters.verbosity }}'
+      publishedPackageVar: '${{ parameters.publishedPackageVar }}'
+    
