@@ -5,7 +5,7 @@ Use this task to download, or package and publish Universal Packages. Universal 
 
 The pipeline requires the following parameters to be defined:
 
-| Name  | type | Display Name | Default | Values | Optional/Required | Comments |
+| Name  | Type | Display Name | Default | Values | Optional/Required | Comments |
 | :------------- | :------------- | :------------- |:------------- | :------------- | :------------- | :------------- |
 | publishDirectory   | string | Path to file(s) to publish | $(Build.ArtifactStagingDirectory) |  | Required |  Artifact source |
 | feedsToUsePublish  | string | Feed location | internal | internal or external | Required | internal or external feed for artifact. Input alias: internalOrExternalPublish. Specifies a feed from this collection or another collection in Azure Artifacts. |
@@ -14,7 +14,7 @@ The pipeline requires the following parameters to be defined:
 | versionOption  | string | versionPublishSelector | patch | major, minor, patch, custom | Required | Specifies a version increment strategy. The custom value to input your package version manually. For new packages, the first version will be 1.0.0 if you specify major, 0.1.0 if you specify minor, or 0.0.1 if you specify patch. |
 | versionPublish  | string | Custom versions | |  | Required when versionPublishSelector = custom | Specifies a custom version schema for the package.   |
 | packagePublishDescription  | string | Description | |  | Optional | Specifies the description of the package contents and/or the changes made in this version of the package.  |
-| verbosity | string | verbosity | None | None, Trace, Debug, Information, Warning, Error, Critical | Optional | verbose type |
+| verbosity | string | Verbosity | None | None, Trace, Debug, Information, Warning, Error, Critical | Optional | verbose type |
 | publishedPackageVar | string | Package Output Variable | | | Optional | Specifies a name for the variable that will contain the published package name and version. |
 
 
